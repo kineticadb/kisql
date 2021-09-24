@@ -157,7 +157,7 @@ A few interactive-mode commands are listed below; for the full list, see
 
 ### Examples
 
-List schemas & tables:
+#### List Schemas & Tables
 
 ```
 Kinetica()=> \d
@@ -169,7 +169,7 @@ Kinetica()=> \d
 +---------------+----------------+--------------+
 ```
 
-Run queries:
+#### Run Queries
 
 ```
 Kinetica()=> SELECT COUNT(*) FROM demo.nyctaxi;
@@ -201,27 +201,25 @@ NYC,6.5,5,2015-04-14 22:00:52
 YCAB,25.5,1,2015-04-29 12:27:31
 ```
 
-#### Load Files:
+#### Load Files
 
 Create a directory, in which to load your file(s):
 
 ```sql
-CREATE DIRECTORY 'my_directory';
+Kinetica()=> CREATE DIRECTORY 'my_directory';
 ```
 
 Upload your file(s) to KiFS:
 
 ```sql
-UPLOAD FILES 'my_data.csv' INTO 'my_directory';
+Kinetica()=> UPLOAD FILES 'my_data.csv' INTO 'my_directory';
 ```
 
 Finally, load your file into a table:
 
 ```sql
-LOAD INTO ki_home.my_data
-FROM FILE PATHS 'kifs:://my_directory/my_data.csv'
+Kinetica()=> LOAD INTO ki_home.my_data FROM FILE PATHS 'kifs://my_directory/my_data.csv'
 ```
-
 
 
 ## Documentation
