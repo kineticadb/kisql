@@ -19,7 +19,8 @@
 
 KiSQL is a SQL command-line interface for interacting with a Kinetica database.
 It can be downloaded to a client and used to run commands on any Kinetica
-instance.
+instance. It is particularly useful for loading files into Kinetica's
+File System (KiFS) from a client.
 
 For the full KiSQL documentation, see
 [KiSQL](https://docs.kinetica.com/7.1/tools/kisql/).
@@ -156,7 +157,7 @@ A few interactive-mode commands are listed below; for the full list, see
 
 ### Examples
 
-List schemas & tables:
+#### List Schemas & Tables
 
 ```
 Kinetica()=> \d
@@ -168,7 +169,7 @@ Kinetica()=> \d
 +---------------+----------------+--------------+
 ```
 
-Run queries:
+#### Run Queries
 
 ```
 Kinetica()=> SELECT COUNT(*) FROM demo.nyctaxi;
@@ -179,8 +180,8 @@ Kinetica()=> SELECT COUNT(*) FROM demo.nyctaxi;
 +----------+
 ```
 
-Pass a query to KiSQL and output the result to CSV format:
- 
+#### Use the Query and Output Format Parameters
+
 ```
 kisql --host localhost \
       --isql \
@@ -198,6 +199,26 @@ YCAB,11.0,1,2015-04-06 13:18:35
 YCAB,8.0,1,2015-04-06 13:10:02
 NYC,6.5,5,2015-04-14 22:00:52
 YCAB,25.5,1,2015-04-29 12:27:31
+```
+
+#### Load Files
+
+Create a directory, in which to load your file(s):
+
+```sql
+Kinetica()=> CREATE DIRECTORY 'my_directory';
+```
+
+Upload your file(s) to KiFS:
+
+```sql
+Kinetica()=> UPLOAD FILES 'my_data.csv' INTO 'my_directory';
+```
+
+Finally, load your file into a table:
+
+```sql
+Kinetica()=> LOAD INTO ki_home.my_data FROM FILE PATHS 'kifs://my_directory/my_data.csv'
 ```
 
 
