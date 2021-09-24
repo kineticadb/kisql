@@ -180,8 +180,8 @@ Kinetica()=> SELECT COUNT(*) FROM demo.nyctaxi;
 +----------+
 ```
 
-Pass a query to KiSQL and output the result to CSV format:
- 
+#### Pass a Query, Output to CSV
+
 ```
 kisql --host localhost \
       --isql \
