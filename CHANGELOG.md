@@ -2,14 +2,14 @@
 
 ## Version 7.1
 
-### Version 7.1.5.0 - TBD
+### Version 7.1.5.0 - 2021-10-13
 
 #### Added
 -   UPLOAD and DOWNLOAD commands
 -   Single-file executable versions of KiSQL, which can be run anywhere
 
 
-### Version 7.1.3.0 - 2021-01-29
+### Version 7.1.3.0 - 2021-03-09
 
 #### Added
 -   KiSQL output of very large and very small DOUBLE and FLOAT values now uses scientific notation
