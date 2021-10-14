@@ -21,6 +21,17 @@ KiSQL is a SQL command-line interface for interacting with a Kinetica database.
 It can be downloaded to a client and used to run commands on any Kinetica
 instance.
 
+KiSQL exposes the complete Kinetica SQL interface, as given in the
+[SQL Support](https://docs.kinetica.com/7.1/concepts/sql/) section, including:
+
+- Ingestion of local file data into tables
+  ([INSERT INTO...SELECT...FROM FILE](https://docs.kinetica.com/7.1/concepts/sql/#insert-into-select-from-file))
+- Uploading of local files into the
+  [Kinetica File System (KiFS)](https://docs.kinetica.com/7.1/tools/kifs/) for later ingestion
+  ([UPLOAD FILE](https://docs.kinetica.com/7.1/concepts/sql/#sql-kifs-upload-file))
+- Downloading of [KiFS](https://docs.kinetica.com/7.1/tools/kifs/) files to local storage
+  ([DOWNLOAD FILE](https://docs.kinetica.com/7.1/concepts/sql/#sql-kifs-download-file))
+
 For the full KiSQL documentation, see
 [KiSQL](https://docs.kinetica.com/7.1/tools/kisql/).
 
@@ -179,14 +190,17 @@ Kinetica()=> SELECT COUNT(*) FROM demo.nyctaxi;
 +----------+
 ```
 
-Pass a query to KiSQL and output the result to CSV format:
- 
+Pass a query to KiSQL and output the result, separating field values with
+commas:
+
 ```
 kisql --host localhost \
       --isql \
       --showTime 0 \
       --format delim --delim ',' \
       --sql 'SELECT TOP 10 vendor_id, TRIM(fare_amount) AS fare_amount, passenger_count, dropoff_datetime FROM demo.nyctaxi'
+```
+```
 vendor_id,fare_amount,passenger_count,dropoff_datetime
 YCAB,20.5,1,2015-04-21 23:40:14
 NYC,10.0,1,2015-04-03 01:43:31
@@ -198,6 +212,26 @@ YCAB,11.0,1,2015-04-06 13:18:35
 YCAB,8.0,1,2015-04-06 13:10:02
 NYC,6.5,5,2015-04-14 22:00:52
 YCAB,25.5,1,2015-04-29 12:27:31
+```
+
+### Loading Files via KiFS
+
+Create a directory, in which to upload your file(s):
+
+```sql
+Kinetica()=> CREATE DIRECTORY 'my_directory';
+```
+
+Upload your file(s) to KiFS:
+
+```sql
+Kinetica()=> UPLOAD FILES 'my_data.csv' INTO 'my_directory';
+```
+
+Finally, load your file into a table:
+
+```sql
+Kinetica()=> LOAD INTO ki_home.my_data FROM FILE PATHS 'kifs://my_directory/my_data.csv'
 ```
 
 
