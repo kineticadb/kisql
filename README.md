@@ -171,12 +171,12 @@ List schemas & tables:
 
 ```
 Kinetica()=> \d
-+---------------+----------------+--------------+
-| TABLE_SCHEM   | TABLE_NAME     | TABLE_TYPE   |
-+---------------+----------------+--------------+
-| SYSTEM        | SYSTEM.ITER    | TABLE        |
-| demo          | demo.nyctaxi   | TABLE        |
-+---------------+----------------+--------------+
++-------------+---------------+----------------+--------------+
+| TABLE_CAT   | TABLE_SCHEM   | TABLE_NAME     | TABLE_TYPE   |
++-------------+---------------+----------------+--------------+
+| Kinetica    | SYSTEM        | ITER           | TABLE        |
+| Kinetica    | demo          | nyctaxi        | TABLE        |
++-------------+---------------+----------------+--------------+
 ```
 
 Run queries:
