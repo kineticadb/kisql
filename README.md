@@ -1,6 +1,15 @@
-<img src="https://2wz2rk1b7g6s3mm3mk3dj0lh-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/kinetica_logo.svg" alt="Kinetica Logo" width="300"/>
-
-### The Database for Time and Space
+<h3 align="center" style="margin:0px">
+	<img width="200" src="https://2wz2rk1b7g6s3mm3mk3dj0lh-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/kinetica_logo.svg" alt="Kinetica Logo"/>
+</h3>
+<h5 align="center" style="margin:0px">
+	<a href="https://www.kinetica.com/">Website</a>
+	|
+	<a href="https://docs.kinetica.com/7.1/">Docs</a>
+	|
+	<a href="https://docs.kinetica.com/7.1/sql/">SQL Docs</a>
+	|
+	<a href="https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg">Community Slack</a>   
+</h5>
 
 
 # Kinetica KiSQL CLI SQL Utility
@@ -22,15 +31,15 @@ It can be downloaded to a client and used to run commands on any Kinetica
 instance.
 
 KiSQL exposes the complete Kinetica SQL interface, as given in the
-[SQL Support](https://docs.kinetica.com/7.1/concepts/sql/) section, including:
+[SQL](https://docs.kinetica.com/7.1/sql/) section, including:
 
-- Ingestion of local file data into tables
-  ([INSERT INTO...SELECT...FROM FILE](https://docs.kinetica.com/7.1/concepts/sql/#insert-into-select-from-file))
 - Uploading of local files into the
   [Kinetica File System (KiFS)](https://docs.kinetica.com/7.1/tools/kifs/) for later ingestion
-  ([UPLOAD FILE](https://docs.kinetica.com/7.1/concepts/sql/#sql-kifs-upload-file))
+  ([UPLOAD FILE](https://docs.kinetica.com/7.1/sql/kifs/#sql-kifs-upload-file))
+- Ingestion of uploaded file data into tables
+  ([LOAD INTO](https://docs.kinetica.com/7.1/sql/load/#load-into))
 - Downloading of [KiFS](https://docs.kinetica.com/7.1/tools/kifs/) files to local storage
-  ([DOWNLOAD FILE](https://docs.kinetica.com/7.1/concepts/sql/#sql-kifs-download-file))
+  ([DOWNLOAD FILE](https://docs.kinetica.com/7.1/sql/kifs/#sql-kifs-download-file))
 
 For the full KiSQL documentation, see
 [KiSQL](https://docs.kinetica.com/7.1/tools/kisql/).
@@ -50,9 +59,7 @@ connect to a Kinetica database running on Linux.
 | Executable   | Description
 | :---         | :---
 | `kisql`      | KiSQL for Unix-based systems (Linux, MacOS, etc.) with JRE 1.8+
-| `kisql7`     | KiSQL for Unix-based systems (Linux, MacOS, etc.) with JRE 1.7
 | `kisql.exe`  | KiSQL for Windows-based systems, with an included JRE 1.8
-| `kisql7.exe` | KiSQL for Windows-based systems, with an included JRE 1.8
 
 **Note**:  The KiSQL for Unix-based systems requires a compatible Java Runtime
            Environment installed where the utility will be run.
@@ -240,19 +247,22 @@ Kinetica()=> LOAD INTO ki_home.my_data FROM FILE PATHS 'kifs://my_directory/my_d
 - [KiSQL Guide](https://docs.kinetica.com/7.1/tools/kisql/)
 
 
-## About Us
-Kinetica is an analytics database for fusing data across streams and data lakes
-to unlock value from spatial and temporal data at scale and speed. Learn about
-us [here](https://www.kinetica.com/).
+## Support
+
+For bugs, please submit an
+[issue on Github](https://github.com/kineticadb/kisql/issues).
+
+For support, you can post on
+[stackoverflow](https://stackoverflow.com/questions/tagged/kinetica) under the
+``kinetica`` tag or
+[Slack](https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg).
 
 
 ## Contact Us
-- Follow on Github: <a class="github-button" href="https://github.com/kineticadb" data-size="large" aria-label="Follow @kineticadb on GitHub">Follow @kineticadb</a>
-- Email: [support@kinetica.com](mailto:support@kinetica.com)
-- Slack: [Slack](https://www.kinetica.com/slack)
-- Visit: [https://www.kinetica.com/contact/](https://www.kinetica.com/contact/)
 
-
-## License
-
-The software is licensed under the MIT license.
+* Ask a question on Slack:
+  [Slack](https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg)
+* Follow on GitHub:
+  [Follow @kineticadb](https://github.com/kineticadb) 
+* Email us:  <support@kinetica.com>
+* Visit:  <https://www.kinetica.com/contact/>
