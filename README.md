@@ -4,9 +4,9 @@
 <h5 align="center" style="margin:0px">
 	<a href="https://www.kinetica.com/">Website</a>
 	|
-	<a href="https://docs.kinetica.com/7.1/">Docs</a>
+	<a href="https://docs.kinetica.com/7.2/">Docs</a>
 	|
-	<a href="https://docs.kinetica.com/7.1/sql/">SQL Docs</a>
+	<a href="https://docs.kinetica.com/7.2/sql/">SQL Docs</a>
 	|
 	<a href="https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg">Community Slack</a>   
 </h5>
@@ -31,18 +31,18 @@ It can be downloaded to a client and used to run commands on any Kinetica
 instance.
 
 KiSQL exposes the complete Kinetica SQL interface, as given in the
-[SQL](https://docs.kinetica.com/7.1/sql/) section, including:
+[SQL](https://docs.kinetica.com/7.2/sql/) section, including:
 
 - Uploading of local files into the
-  [Kinetica File System (KiFS)](https://docs.kinetica.com/7.1/tools/kifs/) for later ingestion
-  ([UPLOAD FILE](https://docs.kinetica.com/7.1/sql/kifs/#sql-kifs-upload-file))
+  [Kinetica File System (KiFS)](https://docs.kinetica.com/7.2/tools/kifs/) for later ingestion
+  ([UPLOAD FILE](https://docs.kinetica.com/7.2/sql/kifs/#sql-kifs-upload-file))
 - Ingestion of uploaded file data into tables
-  ([LOAD INTO](https://docs.kinetica.com/7.1/sql/load/#load-into))
-- Downloading of [KiFS](https://docs.kinetica.com/7.1/tools/kifs/) files to local storage
-  ([DOWNLOAD FILE](https://docs.kinetica.com/7.1/sql/kifs/#sql-kifs-download-file))
+  ([LOAD INTO](https://docs.kinetica.com/7.2/sql/load/#load-into))
+- Downloading of [KiFS](https://docs.kinetica.com/7.2/tools/kifs/) files to local storage
+  ([DOWNLOAD FILE](https://docs.kinetica.com/7.2/sql/kifs/#sql-kifs-download-file))
 
 For the full KiSQL documentation, see
-[KiSQL](https://docs.kinetica.com/7.1/tools/kisql/).
+[KiSQL](https://docs.kinetica.com/7.2/tools/kisql/).
 
 For command-line help, enter:
 
@@ -65,7 +65,7 @@ connect to a Kinetica database running on Linux.
            Environment installed where the utility will be run.
 
 For the KiSQL full parameter set, see
-[KiSQL Parameters](https://docs.kinetica.com/7.1/tools/kisql/#parameters).
+[KiSQL Parameters](https://docs.kinetica.com/7.2/tools/kisql/#parameters).
 
 
 ### Common Connection Parameters
@@ -161,7 +161,7 @@ To connect over SSL, running a SQL script:
 ## Run
 
 A few interactive-mode commands are listed below; for the full list, see
-[KiSQL Interactive Mode](https://docs.kinetica.com/7.1/tools/kisql/#interactive-mode).
+[KiSQL Interactive Mode](https://docs.kinetica.com/7.2/tools/kisql/#interactive-mode).
 
 
 | Command | Description
@@ -243,8 +243,8 @@ Kinetica()=> LOAD INTO ki_home.my_data FROM FILE PATHS 'kifs://my_directory/my_d
 
 
 ## Documentation
-- [Full Documentation](https://docs.kinetica.com/7.1/)
-- [KiSQL Guide](https://docs.kinetica.com/7.1/tools/kisql/)
+- [Full Documentation](https://docs.kinetica.com/7.2/)
+- [KiSQL Guide](https://docs.kinetica.com/7.2/tools/kisql/)
 
 
 ## Support
