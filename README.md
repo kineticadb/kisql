@@ -76,6 +76,7 @@ For the KiSQL full parameter set, see
 | `--port <port>`     | Kinetica database listen port (default is `9191`)
 | `--url <url>`       | Kinetica connection URL; used in lieu of the default host/port configuration for SSL or failover connections
 | `--user <id>`       | Connection user ID
+| `--sessionId <id>`  | Session for `#name` temp tables (letters, digits and `-` only); the session is kept on exit, so the caller must drop it with `/drop/session`
 | `--limit <rows>`    | Number of rows to be requested in a query at a time; default is 10,000 rows
 | `--showTime <0\|1>` | Show (`1`) or don't show (`0`) timing-related output; default is to not show
 | `--isql`            | Output in isql format
